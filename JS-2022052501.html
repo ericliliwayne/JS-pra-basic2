@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- let const var -->
+    <!-- let 區域變數 es6 -->
+    <!-- const 常數 es6 -->
+    <!-- var 全域變數 es5 2015 -->
+    <!-- alert console -->
+    <script>
+        //BOM => window object
+        //alert("123");
+        //window.alert("456");
+
+        //confirm("delete?");
+        //confirm("submit?");
+
+        //prompt('input num1',0);
+        //window.prompt('input num1');
+
+        //console.log("123");
+        //window.console.log("456");
+
+        //typeof 查看資料 type
+
+        //string
+        //php vs JS
+        //1.字串相加
+        //. vs +
+        // str1 = "Hello";
+        // str2 = " PHP";
+        // console.log(str1+str2);
+
+        //2.php "Hello $name"
+        // name = "wayne";
+        // combineStr = `Hello ${wayne}`;
+        // console.log(combineStr);
+
+        //Number
+        let num1 = 123;//數字
+        let num2 = "456";//字串
+        //parseInt parsefloat Number
+        //combineNum = num1 + num2;
+        //console.log(combineNum);//字串相加
+        combineNum = num1 + parseInt(num2);
+        console.log(combineNum);
+
+        let newNum1 = num1.toString();//數字轉字串
+        console.log(newNum1);
+        console.log(typeof(newNum1));
+
+        // confirm('Del ?');
+        //yes
+        //no
+        let result = confirm("Want to delete?");
+        console.log(result);
+        if(result){
+            console.log("OK Del!");
+            //Logic to delete the iteem
+        }
+        
+        let trueBoolean = true;
+        console.log(trueBoolean);
+        let falseBoolean = false; 
+        console.log(falseBoolean);
+
+        //flag 
+        //1.預約疫苗 2.是否真的到場打了
+
+        //月報
+        //日
+
+
+        //boolean 布林值
+        //true false
+        //flag
+        //is
+
+        // flag boolean / flag number / flag string
+
+        //Q:總共過了幾小時幾分鐘
+        // 5/24 23:05
+        // 5/24
+
+        //大的問題，拆小問題
+        //1.23:05 -> 24:00 -> 55分鐘
+        //2.17:57 + 55 => 18:52
+
+        //flag
+        //大問題
+        //1.得到55分
+        //2.17:57
+        //3.組合
+
+        //string
+        //跳脫字元
+        // console.log("您好\nHello wayne");
+
+        //1*1=1 1*2=2 1*3=3 1*4=4 1*5=5
+        let mystr="";
+        for(let i = 1;i<=5;i++){
+            //字串組成方法1
+            mystr = i + " => 1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 \n";
+            //字串組成方法2 ``${i}內為變數
+            mystr = `${i} => 1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 \n`;
+
+            if(i%2==1){
+                //document.write測試使用
+                //正式網頁 課本2-3
+                //<div> or <p> .. id innertext , innerHtml 置換
+                document.write("<p class='red'>");
+                document.write(mystr);
+                document.write("</p>");
+            }else{
+                document.write("<p>");
+                document.write(mystr);
+                document.write("</p>");
+            }
+            
+        }
+
+        //換行\n
+        //html換行br
+
+        //null undefined NaN empty
+        //null可指定一個變數為null 沒有東西
+        //undefined 沒有定義，因為我沒有宣告給他資料，這個變數存在但是未定義
+        //NaN Not a Number 數字 * 字串 => NaN
+
+        //null
+        // let x = null;
+        // console.log("x",x);
+
+        //undefined
+        // let x;
+        // console.log(x);
+
+        //NaN 常見工作中，忘了轉型時出現
+        // let x = 1;
+        // let y = "abc";
+        // console.log(x*y);
+
+        //empty初始值
+        // let emptyX = "";
+        // let emptyY = 0;
+
+        //判斷
+        //number
+        //if(number){...}
+
+        //string
+        // if(emptyX.length > 0){
+        //     console.log(x);
+        // }
+
+        //不宣告變數
+        //test = 123;
+        //可以Delete
+        //let xyz = 123;
+        //不可以Delete
+
+            for(let i = 1;i<=9;i++){//九九乘法表
+                for(let j = 1;j<=9;j++){
+                    result = i * j;
+                    if(j==9){
+                        
+                        document.write(i+"x"+j+"="+result);
+                        document.write("<br>");
+                    }else{
+                        document.write(i+"x"+j+"="+result);
+                        document.write("&nbsp&nbsp&nbsp&nbsp");
+                    }
+                    
+                }
+            }
+    </script>
+</body>
+</html>

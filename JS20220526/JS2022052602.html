@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //條件控制
+        //如果...就可以...否則...
+        //如果我學好程式，就可以賺更多錢，否則賺的錢就少了
+
+        let myLottery = true;
+        let money = 20000;
+        let type = "Luna";
+        //中獎了 true 
+        // if(myLottery){
+        //     console.log("中獎了，明天開始環遊世界~幫助其他人!");
+        // }else{
+        //     console.log("繼續工作!!");
+        // }
+
+        //練習一
+        //1.樂透中獎了
+        //2.200塊，繼續工作 => 1000萬
+        //方法一
+        // if(myLottery){
+        //     if(money > 1000){
+        //         //條件-實際內容-是否我要的結果
+        //         console.log("myLottery",myLottery);
+        //         console.log("money",money);
+        //         console.log("中獎了，明天開始環遊世界~幫助其他人!");
+        //     }
+        //  }
+
+        //方法二
+        //方法一
+        if(myLottery && money > 1000){
+            console.log("myLottery",myLottery);
+                console.log("money",money);
+                console.log("中獎了，明天開始環遊世界~幫助其他人!");
+         }
+        // if(myLottery == true && money>=10000000){
+        //     console.log("中獎了，明天開始環遊世界~幫助其他人!");
+        // }else{
+        //     console.log("繼續工作!!");
+        // }
+
+        //練習二
+        //1.樂透中獎了
+        //2.超過1000萬
+        //3.不能是Luna幣
+        //Luna = null
+        //下市 = undefined
+        //if...else...非黑及白
+        //第三選擇
+        //Luna買
+        //結果:或許有一天，Luna 10000美元，重返榮耀
+        
+        if(myLottery && money > 1000 && type != "Luna"){
+            console.log("myLottery",myLottery);
+            console.log("money",money);
+            console.log("type",type);
+            console.log("練習2 OK!");
+         }else if(myLottery && money > 1000 && type == "Luna"){
+            console.log("myLottery",myLottery);
+            console.log("money",money);
+            console.log("type",type);
+            console.log("或許有一天，Luna 10000美元，重返榮耀!");
+         }else {
+            console.log("繼續工作!!");}
+
+            //流程圖if...else
+            //泰山咖啡店
+            //if...else小練習
+            //身分證字號 有 3 4 5 
+            //會員身分 
+            // 3、4、5 1折
+            // 6、7、8 5折
+            // 9、0 7折
+            //4.沒有會員:95折
+            let id = "FDSFDSFDFDFDSFDSFD";
+        let isMember = true;
+        let idStr = "";
+        let idResult = "";
+        let conditionNum = "";
+        // let idStr = id.search("F");
+
+        // 3 4 5
+        if (idResult.length == 0) {
+            conditionNum = "3";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "A";
+            }
+        }
+
+        if (idResult.length == 0) {
+            conditionNum = "4";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "A";
+            }
+        }
+
+        if (idResult.length == 0) {
+            conditionNum = "5";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "A";
+            }
+        }
+
+
+        //search position 位置
+        // 存在
+        // 0 1 2 3
+        // 不存在
+        // -1
+
+        // 6 7 8
+        if (idResult.length == 0) {
+            conditionNum = "4";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "B";
+            }
+        }
+
+        if (idResult.length == 0) {
+            conditionNum = "5";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "B";
+            }
+        }
+
+        if (idResult.length == 0) {
+            conditionNum = "6";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "B";
+            }
+        }
+
+        // 9 0
+        if (idResult.length == 0) {
+            conditionNum = "9";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "C";
+            }
+        }
+
+        if (idResult.length == 0) {
+            conditionNum = "0";
+            idStr = id.search(conditionNum);
+            if (idStr > 0) {
+                idResult = "C";
+            }
+        }
+
+        //結果
+        console.log('id', id);
+        console.log('isMember', isMember);
+        console.log('idResult', idResult);
+        console.log('idStr', idStr);
+        console.log('conditionNum', conditionNum);
+
+       
+        //idResult & isMember ?
+        // A && member => 1折
+        // B && member => 5折
+        // C && member => 7折
+        // 其他 => 95折
+        if (idResult == "A" && isMember) {
+            console.log('恭喜 得到 1 折');
+        } else if (idResult == "B" && isMember) {
+            console.log('恭喜 得到 5 折');
+        } else if (idResult == "C" && isMember) {
+            console.log('恭喜 得到 7 折');
+        } else {
+            console.log('快加入會員喔 本日 95 折');
+        }
+
+    </script>
+</body>
+</html>

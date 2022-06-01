@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //計算1+2+...+10
+        //方法一
+        // let sum = 0;
+        // for(let i = 1;i<=10;i++){
+        //     sum = sum + i;
+        //     console.log('i => '+i);
+        //     console.log('sum = sum + i => '+sum);
+        // }
+
+        //方法二
+        // let sum = 0;
+        // for(let i = 1;i<=10;i++){
+        //     console.log('i => '+i);
+        //     console.log('sum => '+sum);
+        //     console.log(`${sum} + ${i}`);
+        //     sum = sum + i;
+        //     console.log(`result sum = ${sum}`);
+
+        // }
+
+        //練習二
+        //2-1練習10個*在同一行
+        // document.write("**********");
+        //2-2練習10個*在不同一行
+        //2-3印星星
+        //輸入一個入顯示如下:
+        //*
+        //**
+        //***
+        //****
+        //*****
+        // let sum = "";
+        // let input = Number(prompt("'number',0"));
+        // for(let i = 0;i<input;i++){
+        //     sum = sum + "*";
+        //     document.write(sum);
+        //     document.write("<br>");
+        //     console.log(sum)
+        // }
+        //巢狀迴圈
+        //兩層迴圈
+        //倒三角
+        //*****
+        //****
+        //***
+        //**
+        //*
+        
+        // let input = Number(prompt("'number',0"));
+        // let sum = "";
+        // tmp = input;
+        // for(let i = 0;i<input;i++){
+        //     // tmp--;
+        //     // document.write(i);
+        //     for(let j = 0;j<(input-i);j++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //練習三
+        //矩形
+        //*****
+        //*****
+        //*****
+        //*****
+        //*****
+
+        //方法一
+        // let input = Number(prompt("'number',0"));
+        // for(let i = 0;i<input;i++){
+        //     document.write("*****");
+        //     document.write("<br>");
+        // }
+
+        //方法二
+        // let input = Number(prompt("'number',0"));
+        // for(let i = 0;i<input;i++){
+        //     //蓋大樓
+        //     // document.write(i);
+            
+        //     //畫input數量的星星
+        //     for(let j = 0;j<input;j++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+        
+
+        //練習四
+        //正三角形
+        //&nbsp
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+        // let input = Number(prompt("'number',0"));
+        // let sum = "*";
+        // for(let i = 0;i<input;i++){
+            
+        //     for(let j = (input-1);j>i;j--){//先印空白
+        //         document.write("&nbsp");
+        //     }
+        //     for(let k =0;k<(i*2+1);k++){//再印星星
+        //     document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //倒正三角形
+        // let input = Number(prompt("'number',0"));
+        // for(let i = 0;i<input;i++){
+        //     for(let j = 0;j<i;j++){//先印空白
+        //         document.write("&nbsp");
+        //     }
+        //     for(let k =(input*2-1);k>(i*2);k--){//再印星星
+        //     document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //菱形(上正三加下正三)
+        let input = Number(prompt("'number',0"));
+        for(let i = 0;i<input;i++){//上半部
+            
+            for(let j = (input-1);j>i;j--){//先印空白
+                document.write("&nbsp");
+            }
+            for(let k =0;k<(i*2+1);k++){//再印星星
+            document.write("*");
+            }
+            document.write("<br>");
+        }
+        for(let i = 0;i<(input-1);i++){//下半部
+            for(let j = 0;j<=i;j++){//先印空白
+                document.write("&nbsp");
+            }
+            for(let k =((input-1)*2-1);k>(i*2);k--){//再印星星
+            document.write("*");
+            }
+            document.write("<br>");
+        }
+
+
+
+    </script>
+</body>
+</html>

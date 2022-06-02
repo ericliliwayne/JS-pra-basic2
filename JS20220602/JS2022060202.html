@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //php loop
+        
+        //js for break
+        //遇到則跳掉
+        // for(let i=0;i<=10;i++){
+        //     if(i==4){//遇到4則跳掉結束
+        //         break;
+        //     }
+        //     console.log(i);
+        // }
+
+        //js for continue
+        // for(let i=0;i<=10;i++){
+        //     if(i==4){//遇到4則跳掉再繼續下一個
+        //         continue;
+        //     }
+        //     console.log(i);
+        // }
+
+        //練習一
+        //只顯示1357基數
+        // for(let i=0;i<=20;i++){
+        //     if(i%2==0){//遇到偶數則跳掉再繼續下一個
+        //         continue;
+        //     }
+        //     console.log("這是第 "+i+" 次");
+        // }
+
+        //練習二:只顯示30以下的基數
+        for(let i=0;i<=50;i++){
+            if(i>30){//大於30中斷迴圈
+                break;
+            }
+            if(i%2==0){//只顯示基數
+                continue;
+            }
+            console.log("這是第 "+i+" 次");
+        }
+    </script>
+    
+</body>
+</html>

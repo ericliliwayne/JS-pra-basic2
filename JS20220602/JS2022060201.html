@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid black;
+            text-align: center;
+            font-size: larger;
+        }
+        tr td{
+            border: 1px solid darkslateblue;
+            padding: 2px;
+        }
+        tr:nth-child(odd){
+            background-color: lightgreen;
+        }
+        tr:nth-child(even){
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //練習一 九九乘法表
+        //1*1=1;...
+        // console.log(99);
+        // for(let i=1;i<=9;i++){
+        //     for(let j=1;j<=9;j++){
+        //         result = i*j;
+        //             document.write(i+" X "+j+" = "+result);
+        //             document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //練習二 01*01=01...
+        // for(let i=1;i<=9;i++){ 
+        //     for(let j=1;j<=9;j++){
+        //         let ii= i.toString();//i改成字串並在只有個位數字前面補0
+        //         let I = ii.padStart(2, "0");
+        //         console.log(I);
+        //         let jj= j.toString();//j改成字串並在只有個位數字前面補0
+        //         let J = jj.padStart(2,"0");
+        //         console.log(J);
+        //         result = i*j;
+        //         let resultstr = result.toString();//result改成字串並在只有個位數字前面補0
+        //         let resultstrC = resultstr.padStart(2,"0");
+        //             document.write(J+" x "+I+" = "+resultstrC +"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //練習三 
+        //2*1,2*2,...文字紅色 if
+        //練習四 更多顏色變化
+        for(let i=1;i<=9;i++){ 
+            for(let j=1;j<=9;j++){
+                let ii= i.toString();//i改成字串並在只有個位數字前面補0
+                let I = ii.padStart(2, "0");
+                console.log(I);
+                let jj= j.toString();//j改成字串並在只有個位數字前面補0
+                let J = jj.padStart(2,"0");
+                console.log(J);
+                result = i*j;
+                let resultstr = result.toString();//result改成字串並在只有個位數字前面補0
+                let resultstrC = resultstr.padStart(2,"0");
+                if((j%2==1 && i%2==1) || (j%2==0 && i%2==0)){//一條件式不同可以有多種顏色變化
+                    document.write("<p style='color:red;display:inline;'>"+J+" x "+I+" = "+resultstrC +"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>");
+                }else{
+                    document.write("<p style='color:blue;display:inline;'>"+J+" x "+I+" = "+resultstrC +"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>");
+                }
+            }
+            document.write("<br>"); 
+        }
+        document.write("<hr>");
+        
+        //練習五-table，九九乘法表放入表格內
+        document.write("<table>");
+        for(let i=1;i<=9;i++){ 
+            document.write("<tr>");
+            for(let j=1;j<=9;j++){
+                let ii= i.toString();//i改成字串並在只有個位數字前面補0
+                let I = ii.padStart(2, "0");
+                console.log(I);
+                let jj= j.toString();//j改成字串並在只有個位數字前面補0
+                let J = jj.padStart(2,"0");
+                console.log(J);
+                result = i*j;
+                let resultstr = result.toString();//result改成字串並在只有個位數字前面補0
+                let resultstrC = resultstr.padStart(2,"0");
+                if((j%2==1 && i%2!=1) || (j%2==0 && i%2!=0)){//一條件式不同可以有多種顏色變化
+                    document.write("<td><p style='color:red;display:inline;text-align:center;'>"+J+" x "+I+" = "+resultstrC +"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></td>");
+                }else{
+                    document.write("<td><p style='color:blue;display:inline;text-align:center;'>"+J+" x "+I+" = "+resultstrC +"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p></td>");
+                }
+            }
+            document.write("<br>");
+            document.write("</tr>");
+        }
+            document.write("</table>");
+    </script>
+</body>
+</html>

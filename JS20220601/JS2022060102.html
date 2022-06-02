@@ -136,26 +136,57 @@
         // }
 
         //菱形(上正三加下正三)
-        let input = Number(prompt("'number',0"));
-        for(let i = 0;i<input;i++){//上半部
+        // let input = Number(prompt("'number',0"));
+        // for(let i = 0;i<input;i++){//上半部
             
-            for(let j = (input-1);j>i;j--){//先印空白
-                document.write("&nbsp");
-            }
-            for(let k =0;k<(i*2+1);k++){//再印星星
-            document.write("*");
+        //     for(let j = (input-1);j>i;j--){//先印空白
+        //         document.write("&nbsp");
+        //     }
+        //     for(let k =0;k<(i*2+1);k++){//再印星星
+        //     document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+        // for(let i = 0;i<(input-1);i++){//下半部
+        //     for(let j = 0;j<=i;j++){//先印空白
+        //         document.write("&nbsp");
+        //     }
+        //     for(let k =((input-1)*2-1);k>(i*2);k--){//再印星星
+        //     document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // 畫星星 HW 20220601
+        // 輸入一個數 會顯示如下圖 
+        // input = 5 時
+        // 1*****
+        // 2****
+        // 3***
+        // 4** 
+        // 5* 
+        // i-- input 多 => 少
+        //方法一
+        // let input = Number(prompt("'number',0"));
+        // for(let i = 0;i<input;i++){
+        //     //蓋大樓
+        //     // document.write(i);
+        //     //畫星星
+        //     for(let j=input;i<j;j--){
+        //     document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        //方法二,i--
+        let input = Number(prompt("'number',0"));
+        for(let i=input;i>0;i--){
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
             }
             document.write("<br>");
         }
-        for(let i = 0;i<(input-1);i++){//下半部
-            for(let j = 0;j<=i;j++){//先印空白
-                document.write("&nbsp");
-            }
-            for(let k =((input-1)*2-1);k>(i*2);k--){//再印星星
-            document.write("*");
-            }
-            document.write("<br>");
-        }
+        
 
 
 

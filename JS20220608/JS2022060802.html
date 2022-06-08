@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    本期開獎號碼為:<br>
+    <script>
+        //array basic
+        //array語法
+        let myArr=[1,2,3,4,5];
+        console.log("myArr",myArr);
+        //array邏輯:本質解決變數不夠
+        //班上有25位同學
+        //方法一
+        let stuident1 = 1;
+        let stuident2 = 2;
+        let stuident3 = 3;
+
+        //方法二:array
+        let studentArray = [1,2,3,4,5];
+
+        //練習一
+        //大樂透(1~49)6個號碼
+        //key不能重複 <== 防呆
+        //本期胎獎號碼為:1,2,3,4,5,6
+        //1.取出亂數1~49
+        // let numarr=[];
+        //     for(let i=1;i<=49;i++){
+        //         numarr[i-1]=i;
+        //     }
+        //     console.log("numarr",numarr);
+            let x = Math.floor(Math.random()*49)+1
+            console.log("x",x);
+        //2.跑6次
+        let i=1;
+        let lottery = [];
+            while(lottery.length<6){
+                x = Math.floor(Math.random()*49)+1
+                //array push 增加array 內容
+                
+                if(lottery.indexOf(x) < 0){
+                    lottery.push(x);
+                    document.write(`第${i}個號碼: ${x} <br>`);
+                }else{
+
+                }
+                
+                i++;
+            }
+        //3.做防呆
+        //增加array
+        //num push 空array 增加內容
+        //array內容是否有重複
+        
+    </script>
+</body>
+</html>

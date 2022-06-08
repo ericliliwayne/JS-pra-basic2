@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //while
+        //練習一 成績加總
+        //輸入學生數量 input
+        //student1 國文
+        //student1 英文
+        //student1 數學
+        //計算總分與平均分數
+        //最後畫面顯示
+        //學生1 國文=>60 英文=>70 數學=>80
+        //學生1 總分=>210 平均=>70
+        //練習二
+        //全班總分&平均
+        let student = Number(prompt("'學生人數',0"));
+        // for(let i=1;i<=student;i++){
+        //     let chinese = Number(prompt(`學生${i} 國文分數?`,"0"));
+        //     let english = Number(prompt(`學生${i} 英文分數?`,"0"));
+        //     let math = Number(prompt(`學生${i} 數學分數?`,"0"));
+        //     result = chinese + english + math;
+        //     let avg = (result/3);
+        //     document.write(`學生${i} 國文=>${chinese}、英文=>${english}、數學=>${math}`);
+        //     document.write("<br>");
+        //     document.write(`學生${i} 總分=>${result}、平均分數=>${avg}`);
+        //     document.write("<br>");
+        //     document.write("<br>");
+        //     document.write("<br>");
+        // }
+        //     let i = 1;
+        //     let allsum=0;
+        //     let csum = 0;
+        //     let esum = 0;
+        //     let msum = 0;
+        // while(i<=student){
+        //     let chinese = Number(prompt(`學生${i} 國文分數?`,"0"));
+        //     let english = Number(prompt(`學生${i} 英文分數?`,"0"));
+        //     let math = Number(prompt(`學生${i} 數學分數?`,"0"));
+        //     result = chinese + english + math;
+        //     let avg = (result/3);
+        //     document.write(`學生${i} 國文=>${chinese}、英文=>${english}、數學=>${math}`);
+        //     document.write("<br>");
+        //     document.write(`學生${i} 總分=>${result}、平均分數=>${avg}`);
+        //     document.write("<br>");
+        //     document.write("<br>");
+        //     document.write("<br>");
+        //     i++;
+        //     allsum=allsum+result;
+        // }
+        
+        // let avg2 = (allsum/student).toFixed(2);
+        // document.write(`學生${student}位，總分=>${allsum}、平均分數=>${avg2}`);
+
+        //練習三
+        //到某次中斷
+
+        let i = 1;
+            let allsum=0;
+            let csum = 0;
+            let esum = 0;
+            let msum = 0;
+        while(i<=student){
+            if(student>3){
+                document.write("老師手會斷掉");
+                break;
+            }
+            let chinese = Number(prompt(`學生${i} 國文分數?`,"0"));
+            let english = Number(prompt(`學生${i} 英文分數?`,"0"));
+            let math = Number(prompt(`學生${i} 數學分數?`,"0"));
+            result = chinese + english + math;
+            let avg = (result/3);
+            document.write(`學生${i} 國文=>${chinese}、英文=>${english}、數學=>${math}`);
+            document.write("<br>");
+            document.write(`學生${i} 總分=>${result}、平均分數=>${avg}`);
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            i++;
+            allsum=allsum+result;
+        }
+        if(student<=3){
+        let avg2 = (allsum/student).toFixed(2);
+        document.write(`學生${student}位，總分=>${allsum}、平均分數=>${avg2}`);
+        }
+    </script>
+</body>
+</html>

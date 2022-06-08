@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //do...while...
+        //至少執行一次
+        //練習一
+        // let i = 0;
+        // do {
+        //     document.write(i);
+        //     document.write("<br>");
+        //     i++;
+        // } while (i<10);
+
+        //練習二
+        //曉明來兒童樂園
+        //每項設施門票10元
+        //前三項低消300
+        //玩了10項要花?錢
+        let i = 1;
+        let sum = 0;
+        let money = 0;
+        let money2 = 0;
+        do {
+            if(i<=3){
+                money = 300;
+            }else{
+                money = money+10; 
+            }
+            if(i==1){
+                money2 = 300;
+            }else if(i==2 ||i==3){
+                money2 = 0;
+            }else{
+                money2 = 10;
+            }
+            // money = money+money2;
+            document.write(`第${i}次，花${money2} 元，總共花了 : ${money} 元 <br>`);
+            i++;
+        } while (i<=10);
+        // document.write(`總共花了 : ${money} 元`);
+    </script>
+</body>
+</html>

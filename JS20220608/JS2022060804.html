@@ -45,7 +45,101 @@
             document.write(`第${i}次，花${money2} 元，總共花了 : ${money} 元 <br>`);
             i++;
         } while (i<=10);
-        // document.write(`總共花了 : ${money} 元`);
+        document.write("<hr><hr>");
+
+        // hw060801
+        // 0-100 奇數
+        //for
+        //while
+        //do while
+        let j=0;
+        document.write(`以for來寫: <br>`);
+        for(j=0;j<=100;j++){
+            if(j%2==1){
+                document.write(`${j},`);
+            }
+        }
+        document.write(`<hr>`);
+        document.write(`以while來寫: <br>`);
+        let k=0;
+        while(k<=100){
+            if(k%2==1){
+                document.write(`${k},`);
+            }
+            k++;
+        }
+        document.write(`<hr>`);
+        document.write(`以dowhile來寫: <br>`);
+        let l=0;
+        do {
+            if(l%2==1){
+                document.write(`${l},`);
+            }
+            l++;
+        } while (l<=100);
+        document.write("<hr><hr>");
+        // hw060802
+        // 輸入兩個數 計算0 - 1000 所有可以被3與11除的數
+        // for
+        // while
+        // do while
+        document.write(`以for來寫: <br>`);
+        let num1 = Number(prompt(`隨機數字1`,"0"));
+        let num2 = Number(prompt(`隨機數字2`,"0"));
+        let input1 = 0;
+        let input2 = 0;
+        if(num1<num2){
+            input1 = num1;
+            input2 = num2;
+        }else{
+            input1 = num2;
+            input2 = num1;
+        }
+        
+        for(i=input1;i<=input2;i++){
+            if(i%33==0 && i<=1000){
+                document.write(`${i},`);
+            }
+        }
+        document.write(`<hr>`);
+        document.write(`以while來寫: <br>`);
+        let m = 1;
+        if(num1<num2){
+            while(m<=num2){
+            if(m%33==0 && m<=1000){
+                document.write(`${m},`);
+            }
+            m++;
+        }
+        }else{
+        while(m<=num1){
+            if(m%33==0 && m<=1000 && m>0){
+                document.write(`${m},`);
+            }
+            m++;
+        }
+    }
+        document.write(`<hr>`);
+        document.write(`以dowhile來寫: <br>`);
+        let n = 1;
+        if(num1<num2){
+            do {
+                if(n%33==0 && n<=1000 && n>0){
+                document.write(`${n},`);
+            }
+            n++;
+            } while (n<=num2);
+        
+        }else{
+            if(num1<num2){
+            do {
+                if(n%33==0 && n<=1000 && n>0){
+                document.write(`${n},`);
+            }
+            n++;
+            } while (n<=num1);
+        }
+    }
     </script>
 </body>
 </html>

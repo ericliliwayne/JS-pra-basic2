@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //變數，很多地方重複使用
+        //array很多變數
+        //1.php vs array
+        let myArr = [1,2,3,4,5];
+        console.log("myArr",myArr);
+        //2.index array
+        let carsArr = ['volvo','toyota','benz'];
+        console.log("carsArr",carsArr);
+        for(let i=0;i<carsArr.length;i++){
+            console.log(carsArr[i]);
+            //key => i;value => carsArr[i]
+        }
+        //function
+
+        //3.Associative array 關連陣列
+        //JS 沒有字串-關聯式array
+        //type object
+        carsArr.forEach((value,index) => {
+            console.log("Hello JS foreach");
+            // console.log(element);//element = value
+            console.log(index);
+            console.log(value);
+            });
+        //for each
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        numbers.forEach(myFunction);
+
+        function myFunction(value, index, array) {
+            txt += value + "<br>";
+        }
+    </script>
+</body>
+</html>

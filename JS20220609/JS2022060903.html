@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //[1,3,5,7,9] => [2,6,10,14,18]
+        let arr1 = [1,3,5,7,9];
+        let newarr1 = [];
+        //foreach
+        arr1.forEach(function(value,key){
+            newarr1.push(value*2)
+        });
+        console.log('arr1',arr1);
+        console.log('newarr1',newarr1);
+
+        //map filter reduce
+        //map
+        let arr2 = [1,3,5,7,9];
+        // let maparr = arr2.map(function(value){
+        //     return value * 2;
+        // });
+         let maparr = arr2.map(value =>  value * 2);
+        console.log('arr2',arr2);
+        console.log('maparr',maparr);
+        //function 改成 =>
+        //當只有一個return，可以捨去{}與return
+        //(value)當只有一個變數(參數)，可省()
+        //(value,key)當兩個變數(參數)，不可省()
+        //block內{}不只return不可以省
+
+        //arrow function箭頭函式
+        //key word
+        //左邊參數 => 回傳結果
+        // let maparr = arr2.map(value =>  value * 2);
+        
+        //練習一
+        //長榮40個月
+        //[1,2,3,4,5]
+        //[1~3]20個月
+        //[4~5]四萬以上40個月
+        let moneyArr = [1,2,3,9,8,7,1,2,4,5];
+        let mapMoneyArr = moneyArr.map(function(value){
+            if(value>=4){
+                return value * 40
+            }else{
+                return value * 20
+            }
+        });
+        console.log('moneyArr',moneyArr);
+        console.log('mapMoneyArr',mapMoneyArr);
+        //練習二
+        //array filter filter return 條件 vs map return value運算
+        //[1,2,3,4,5,6,7,8,9,10] => [2,4,6,8,10]
+        //for each
+        let filterArr = [1,2,3,4,5,6,7,8,9,10];
+        let newfilterArr = filterArr.filter(function(element) {
+            // return (element>=4)
+            return (element%2==0)
+        });
+        console.log('filterArr',filterArr);
+        console.log('newfilterArr',newfilterArr);
+
+
+        //array的加總[1,2,3,4,5,6,7,8,9,10]
+        //foreach
+        //reduce
+        let reduceArr = [1,2,3,4,5,6,7,8,9,10];
+        // let newreduceArr = [];
+        // let sum = 0;
+        // reduceArr.forEach(value =>{
+        //     sum+=value;
+        // })
+        // console.log(sum);
+        let sum = reduceArr.reduce(function(total,value){
+            console.log('Hello reduce~');
+            console.log(total);//加總累值
+            console.log(value);//現在的值
+            return total+value;
+        });
+        console.log(sum);
+    </script>
+</body>
+</html>

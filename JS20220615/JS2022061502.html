@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object.keys
+        const obj = {
+            a : 'kobe',
+            b : 'wayne',
+            c : 'dog',
+        };
+
+        console.log(Object.keys(obj));//get object keys => ['a','b','c']
+        console.log(Object.values(obj));//get object values => ['kobe','wayne','dog']
+        console.log(Object.entries(obj));//get object values => [['a','kobe'],['b','wayne'],['c','dog']]
+
+        let entriesArr = Object.entries(obj);
+        entriesArr.forEach(value => {
+            console.log('hello foreach');
+            console.log(value);
+            console.log(value[0]);
+            console.log(value[1]);
+        })
+        //map array
+        //小練習
+        //我要顯示map array ['a=>kobe','b=>wayne','c=>dog']
+        const mapArr = entriesArr.map(value => {
+            console.log(value);
+            let [first , second] = value; //['a','kobe']
+            // return first; // mapArr = ['a','b','c']
+            // return second; // mapArr = ['kobe','wayne','dog']
+            return first+"=>"+second; // mapArr = ['a=>kobe','b=>wayne','c=>dog']
+        });
+        console.log('mapArr',mapArr);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //functuon
+        //宣告
+        function sayhello(){
+            document.write('hello<br>');
+        }
+        //呼叫
+        sayhello();
+        sayhello();
+        sayhello();
+        sayhello();
+        sayhello();
+
+        //丟到變數
+        let myFunction = function(){
+            document.write('HI~<br>');
+        }
+        myFunction();
+        myFunction();
+        myFunction();
+        myFunction();
+
+        //function(name)
+        function sayHelloByName(name='wayne') {
+            document.write(`hello ${name} <br>`);
+        }
+        sayHelloByName('eric');
+        sayHelloByName('alice');
+        sayHelloByName('bay');
+        sayHelloByName();
+
+        //練習 let myFunction2 = 有參數的Function
+        let myFunction2 = function sayHelloByName(name='wayne') {
+            document.write(`hello ${name} <br>`);
+        }
+        myFunction2('007');
+        myFunction2('kobe');
+        myFunction2('michael');
+        myFunction2('');
+
+        //return value function
+        function sum(num1,num2) {
+            // return num1+num2;
+            // return num1-num2;
+            // return num1*num2;
+            return num1/num2; 
+        }
+        let result = sum(5,8);
+        document.write(result);
+        document.write("<hr>");
+        
+        //練習 let myFunction3 = 有參數的function return
+        let myFunction3 = function sum(num1,num2) {
+            // return num1+num2;//一碰到return，就會傳值回去不會繼續跑下面的程式
+            // return num1-num2;
+            // return num1*num2;
+            return num1/num2; 
+        }
+        document.write(myFunction3(15,5));
+        document.write("<hr>");
+
+        //arrow function箭頭函式
+        let arrowFun = (num1,num2) => num1/num2; 
+        document.write(arrowFun(15,205));
+
+        //object function
+        let students = 
+        {
+            'id' : 1,
+            'name' : 'bob',
+            'tel' : '0911-111-111',
+            'bonus': '1000',
+            'fn1':function(){
+                console.log('this',this);
+                document.write(`hello ${this.name} <br>`);
+            },
+            'fnArrow' : value => {
+                console.log('fnArrow this',this);
+            } 
+        };
+        //js this 最難理解的地方
+    students.fn1();
+    students.fn1();
+    students.fn1();
+    students.fnArrow();
+
+    function exFunction (){
+            console.log('exFunction this',this); //global
+        }
+        exFunction()
+        
+    </script>
+</body>
+</html>

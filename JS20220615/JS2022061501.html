@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    object
+    <script>
+        // index arr
+        const myArr = [1,2,3];
+        console.log(myArr);
+
+        // 關聯式array
+        const myObj = {
+            'a' : 'amy',
+            'b' : 'bob',
+            'c' : 'cat',
+        };
+        const myObj2 = {
+            a : 'kobe',
+            b : 'wayne',
+            c : 'dog',
+        };
+        console.log(myObj);
+        console.log(myObj2);
+
+        //for in => get key
+        for (const key in myObj2) {
+            console.log('hello for in');
+            console.log(key);
+            console.log(myObj2[key]);
+        }
+
+        //for of => get value
+        //object轉iterable
+        let keysObjs = Object.keys(myObj);
+        let valueObjs = Object.values(myObj);
+        let keysObjs2 = Object.keys(myObj2);
+        let valueObjs2 = Object.values(myObj2);
+        for (const value of valueObjs2) {
+            console.log('hello for of');
+            console.log(value);
+        }
+
+        // const myArr2 = [
+        //     'key' : 'value',
+        //     'key' : 'value',
+        //     'key' : 'value',
+        //     'key' : 'value',
+        //     'key' : 'value',
+        // ];
+        
+    
+    </script>
+</body>
+</html>

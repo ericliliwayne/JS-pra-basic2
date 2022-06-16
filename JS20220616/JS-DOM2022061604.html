@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.cwb.gov.tw/V8/C/">link</a>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <script>
+        //Attribute get set
+        const myA = document.querySelector('a');
+        console.log(myA);
+        console.log(myA.getAttribute('href'));
+        myA.setAttribute('href','https://tw.yahoo.com/');
+        console.log(myA.getAttribute('href'));
+
+        //Attribute get set class
+        const myP = document.querySelector('P');
+        myP.setAttribute('class','red');
+
+        //練習一 全部的p green setAttribute 方式 querySelectorAll
+        const myP2 = document.querySelectorAll('P');
+        myP2.forEach(value => {
+            value.setAttribute('class','green');
+        })
+        
+    </script>
+</body>
+</html>

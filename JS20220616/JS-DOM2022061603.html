@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-test="5000">pppppppppp</p>
+    <p data-test="2000" id="idP">p2p2p2p2</p>
+    <p data-test="3000" id="myDiv">pp3pp3pp3pp3</p>
+    <p class="myDivclass" data-test="1000">p4p4p4p4</p>
+    <div><p data-test="5200">div+p</p></div>
+    <script>
+        //抓資料
+        //querySelector抓第一筆的資料
+        const myP1 = document.querySelector('p');
+        const myP2 = document.getElementById('idP');
+        const myP3 = document.querySelector('#myDiv');
+        const myP4 = document.querySelector('.myDivclass');
+        const myP5 = document.querySelector('div > p');
+        //getElementById透過ID抓單一ID
+        console.log('myP1',myP1);
+        console.log('myP2',myP2);
+        console.log('myP3',myP3);
+        console.log('myP4',myP4);
+        console.log('myP5',myP5);
+        //更改文字
+        //textContent innerText innerHTML
+        myP1.textContent = "text p1 OK"; //純文字
+        // myP2.innerText = 'text p2 ok';
+        // myP2.innerText = '<b>text p2 ok</b>'; //純文字
+        myP2.innerHTML = '<b>text p2 ok</b>'; //html
+
+        //練習一 myP5 color red innerstyle
+        myP5.style.color = 'red';
+        myP5.style.fontSize = '50px';
+
+        //練習二 所有的p改成藍色
+        const myP6 = document.querySelectorAll('p');
+        console.log('myP6',myP6);
+        myP6[0].style.color = 'blue';
+        myP6[1].style.color = 'blue';
+        myP6[2].style.color = 'blue';
+        myP6[3].style.color = 'blue';
+        myP6[4].style.color = 'blue';
+
+        //練習三 for each 換 querySelectorAll
+        let sum = 0;
+        myP6.forEach(function(value,index) {
+            console.log(value.dataset.test);
+            let a = Number(value.dataset.test);
+            console.log('a',a);
+            // value.style.color = 'green';
+            if(index%2==0){ //練習四 .偶數變色
+                value.style.color = 'green';
+            }
+            value.textContent = `Hello p${index}`;
+            sum = sum + a;//練習五 data-test 加總 方法一
+            console.log('sum',sum);
+        })
+        
+        //練習五 data-test 加總 方法二 轉array
+        let allPArr = [...myP6];
+        let allSum = allPArr.reduce(function(total,value){
+            console.log(total);
+            const testNum = Number(value.dataset.test);
+            return total + testNum;
+        },0);
+        console.log('allSum',allSum);
+        
+    </script>
+</body>
+</html>

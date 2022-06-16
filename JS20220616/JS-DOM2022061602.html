@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Title</title>
+</head>
+<body>
+    dom
+    <h1>A heading</h1>
+    <a href="">Link Text</a>
+    <button>button</button>
+    <p>123</p>
+    <div>456</div>
+
+    <script>
+        const myH1 = document.querySelector('h1');
+        console.log(myH1);
+        myH1.textContent = 'Hello';
+
+        //練習一 a tag 文字
+        //text link Text => linkA
+        const myA1 = document.querySelector('a');
+        console.log(myA1);
+        myA1.textContent = 'linkA';
+
+        //練習二 button文字
+        // text => myBtnOK
+        const myB1 = document.querySelector('button');
+        let string = myB1.textContent;
+        console.log('string',string);
+        console.log(myB1);
+        myB1.textContent = 'myBtnOK';
+
+        //練習三 p文字
+        // text => pOK
+        const myP1 = document.querySelector('p');
+        console.log(myP1);
+        myP1.textContent = 'pOK';
+
+        //練習四 div文字
+        // text => divOK
+        const myD1 = document.querySelector('div');
+        console.log(myD1);
+        myD1.textContent = 'divOK';
+
+    </script>
+</body>
+</html>

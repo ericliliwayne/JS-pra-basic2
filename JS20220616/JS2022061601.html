@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        obj = {
+            'id':1,
+            'name':'amy',
+            'fun1':function(){
+                console.log('hello fun1 OK ');
+                console.log('this',this);
+                console.log(this.id);
+                console.log(this.name);
+            },
+            'fun2':function(num1,num2){
+                return num1+num2;
+            },
+            fun3() {
+                console.log('fun3');
+                console.log('fun3 this',this);
+
+            },
+            'arrowFun1': () => {    
+                console.log('arrowFun1');
+                console.log('arrow this',this);
+            },
+        };
+        //obj內的this
+        obj.fun1();
+        
+        //外部(window)的this
+        console.log('外部this',this);
+
+        //練習一 原本的obj
+        //新增兩個變數
+        //num1,num2
+        //function => sum num1+num2
+        console.log(obj.fun2(15,51));
+
+        obj.fun3();// function 簡化而來 記得不是箭頭函式
+
+        // 箭頭 this / arrow function
+        // arrow this window
+        obj.arrowFun1();
+
+        function outFun(){
+            console.log('outFun this',this); //window global
+        }
+        outFun();
+    </script>
+</body>
+</html>

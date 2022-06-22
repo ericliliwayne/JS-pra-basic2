@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ppp">
+        <p id="p1">Lorem ipsum dolor sit amet.</p>
+        <p id="p2" onclick="delP(this)">51651651</p>
+    </div>
+    <div id="aaa">
+        <p id="p2">51651651</p>
+    </div>
+    <button onclick="newN()">按我</button>
+    <button onclick="del1()">刪我</button>
+    <button onclick="del2()">刪我</button>
+
+    <script>
+        
+        //建立element元素(p)
+        const pElement = document.createElement('p');
+        //建立text節點
+        const textTextNode = document.createTextNode('Hello 你好嗎?衷心感謝');
+        //element 加入 text (關聯)
+        pElement.appendChild(textTextNode);
+        console.log('pElement',pElement);
+
+        //練習一 建立好的pElement
+        //如何塞進去google w3school js createElement
+        const newA = document.getElementById('ppp');
+        newA.appendChild(pElement);
+        //newA.appendChild(pElement);//無法加入已經加入的節點
+
+        //再建立一組p text div
+        const pElement2 = document.createElement('p');
+        const textTextNode2 = document.createTextNode('珍重再見，期待再相逢~');
+        pElement2.appendChild(textTextNode2);
+        newA.appendChild(pElement2);
+
+        //練習二
+        //button
+        //建立一組新的Hello 你好嗎?
+        //click -> function 每次都會建新的p 新的text 新的appendChild
+        
+        function newN(){
+            const pElement2 = document.createElement('p2');
+        const textTextNode2 = document.createTextNode('珍重再見，期待再相逢~');
+        pElement2.appendChild(textTextNode2);
+        newA.appendChild(pElement2);
+        }
+
+        //練習
+        //p tag onclick=""
+        //p1刪除p1
+        //p2刪除p2
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
+
+        function delP(element) {
+            console.log(delP);
+            console.log(this);
+            console.log('element',element);
+            p2.remove();
+        }
+        function del1() {
+            
+            newA.remove();
+        }
+        // function del1(){
+        //     p1.removeChild();
+        // }
+        // function del2(){
+        //     p2.removeChild();
+        // }
+    </script>
+</body>
+</html>
